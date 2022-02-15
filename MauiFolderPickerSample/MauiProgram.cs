@@ -14,6 +14,8 @@ public static class MauiProgram
 
 #if WINDOWS
 		builder.Services.AddTransient<IFolderPicker, Platforms.Windows.FolderPicker>();
+#elif MACCATALYST
+		builder.Services.AddTransient<IFolderPicker, Platforms.MacCatalyst.FolderPicker>();
 #endif
 		builder.Services.AddTransient<MainPage>();
 		builder.Services.AddTransient<App>();
