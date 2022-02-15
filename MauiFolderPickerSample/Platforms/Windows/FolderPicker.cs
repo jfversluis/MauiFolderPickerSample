@@ -16,7 +16,7 @@ namespace MauiFolderPickerSample.Platforms.Windows
 
             var result = await folderPicker.PickSingleFolderAsync();
 
-            return result.Path;
+            return result?.Path;
         }
     }
 }
